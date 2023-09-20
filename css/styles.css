@@ -45,7 +45,7 @@ nav li a:hover {
     color: white;
 }
 
-article {
+main {
     width: 60%;
     padding: 15px;
     margin: 15px;
@@ -93,4 +93,9 @@ aside li {
 
 aside li:last-child {
     border-bottom: none;
+}
+
+.dashboard tr {
+    border: solid black 1px;
+    background-color: gray;
 }
