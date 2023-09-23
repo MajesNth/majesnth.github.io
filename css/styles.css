@@ -40,20 +40,23 @@ nav li a:hover {
     color: white;
 }
 
+.wrapper {
+    display: flex;
+    /*justify-content: space-between;*/
+}
+
 .active {
     background-color: rgb(50, 50, 255);
     color: white;
 }
 
 main {
-    width: 60%;
+    display: block;
     padding: 15px;
     margin: 15px;
 }
 
 aside {
-    float: right;
-    width: 30%;
     padding-left: 15px;
     margin-left: 15px;
 }
@@ -65,7 +68,7 @@ aside ul {
     margin: 0;
     padding: 0;
     height: max-content;
-    width: max-content;
+    width: auto;
     position: fixed;
     /*Make it stick, even on scroll*/
     /*overflow: auto;
@@ -98,4 +101,10 @@ aside li:last-child {
 .dashboard tr {
     border: solid black 1px;
     background-color: gray;
+}
+
+.answer {
+    margin-left: 45px;
+    list-style-type: circle;
+    list-style-position: inside;
 }
