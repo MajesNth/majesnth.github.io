@@ -1,9 +1,31 @@
+:root {
+    --bg-color: rgb(240, 240, 240);
+    --h-font-color: rgb(33, 53, 85);
+    --body-font-color: rgb(79, 112, 156);
+    --inac-bg-color: rgb(229, 210, 131);
+    --ac-bg-color: rgb(33, 53, 85);
+}
+
 header {
     padding-bottom: 37px;
 }
 
+body {
+    background-color: rgb(240, 240, 240);
+    color: var(--body-font-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--h-font-color);
+}
+
 nav ul {
-    background-color: beige;
+    background-color: rgb(229, 210, 131);
     white-space: nowrap;
     list-style-type: none;
     margin: 0;
@@ -46,7 +68,7 @@ nav li a:hover {
 }
 
 .active {
-    background-color: rgb(50, 50, 255);
+    background-color: var(--ac-bg-color);
     color: white;
 }
 
@@ -62,7 +84,7 @@ aside {
 }
 
 aside ul {
-    background-color: beige;
+    background-color: var(--inac-bg-color);
     white-space: nowrap;
     list-style-type: none;
     margin: 0;
