@@ -1,18 +1,29 @@
 :root {
+    /*
     --bg-color: rgb(240, 240, 240);
     --h-font-color: rgb(33, 53, 85);
     --body-font-color: rgb(79, 112, 156);
     --inac-bg-color: rgb(229, 210, 131);
     --ac-bg-color: rgb(33, 53, 85);
+    */
+    --bg-color: #084C61;
+    --h-font-color: #DB504A;
+    --body-font-color: #E3B505;
+    --inac-bg-color: #56A3A6;
+    --ac-bg-color: #4F6D7A;
 }
+
+
+/*Elements that apply to all pages*/
 
 header {
     padding-bottom: 37px;
 }
 
 body {
-    background-color: rgb(240, 240, 240);
+    background-color: var(--bg-color);
     color: var(--body-font-color);
+    text-align: center;
 }
 
 h1,
@@ -22,10 +33,23 @@ h4,
 h5,
 h6 {
     color: var(--h-font-color);
+    text-align: center;
+}
+
+img {
+    text-align: center;
+}
+
+
+/*Navbar*/
+
+nav {
+    text-align: left;
 }
 
 nav ul {
-    background-color: rgb(229, 210, 131);
+    display: inline-block;
+    background-color: var(--inac-bg-color);
     white-space: nowrap;
     list-style-type: none;
     margin: 0;
@@ -78,20 +102,26 @@ main {
     margin: 15px;
 }
 
+
+/*Aside*/
+
 aside {
     padding-left: 15px;
     margin-left: 15px;
+    text-align: center;
 }
 
 aside ul {
+    display: inline-block;
+    /* text-align: left; */
     background-color: var(--inac-bg-color);
     white-space: nowrap;
     list-style-type: none;
     margin: 0;
     padding: 0;
     height: max-content;
-    width: auto;
-    position: fixed;
+    width: max-content;
+    /* position: fixed; */
     /*Make it stick, even on scroll*/
     /*overflow: auto;
     /* Enable scrolling if the sidenav has too much content */
@@ -120,16 +150,14 @@ aside li:last-child {
     border-bottom: none;
 }
 
-.dashboard tr {
-    border: solid black 1px;
-    background-color: gray;
-}
 
-.answer {
-    margin-left: 45px;
-    list-style-type: circle;
-    list-style-position: inside;
-}
+/*Single page elements*/
+
+
+/* Dashboard */
+
+
+/* Progress bar */
 
 .progress-bar {
     position: relative;
@@ -167,10 +195,24 @@ aside li:last-child {
     height: 100%;
     /*background-color: black;*/
     background: gray;
-    background-image: radial-gradient(blue 1px, transparent 0);
+    background-image: radial-gradient(var(--h-font-color) 1px, transparent 0);
     background-size: 4px 4px;
     background-position: -1px -1px;
     font-size: 12px;
-    color: blue;
+    color: var(--h-font-color);
     white-space: nowrap;
+}
+
+.dashboard tr {
+    border: solid black 1px;
+    background-color: darkblue;
+}
+
+
+/* FAQ */
+
+.answer {
+    margin-left: 45px;
+    list-style-type: circle;
+    list-style-position: inside;
 }
