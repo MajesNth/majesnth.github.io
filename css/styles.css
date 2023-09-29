@@ -14,16 +14,10 @@
 }
 
 
-/*Elements that apply to all pages*/
+/*General Elements that apply to all pages*/
 
 header {
     padding-bottom: 37px;
-}
-
-body {
-    background-color: var(--bg-color);
-    color: var(--body-font-color);
-    text-align: center;
 }
 
 h1,
@@ -34,6 +28,40 @@ h5,
 h6 {
     color: var(--h-font-color);
     text-align: center;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--body-font-color);
+    /* text-align: center; */
+    margin: 0px 0px 20px 0px;
+}
+
+a {
+    color: var(--h-font-color);
+}
+
+ol {
+    /* margin-left: 5%; */
+    list-style-position: inside;
+    text-align: left;
+    margin-left: 25%;
+}
+
+ul {
+    /* margin-left: 5%; */
+    list-style-position: inside;
+    text-align: left;
+}
+
+.answer {
+    list-style-type: square;
+    text-align: left;
+    margin-left: 15%;
+}
+
+.numbered {
+    list-style-type: lower-roman;
 }
 
 img {
@@ -48,19 +76,21 @@ nav {
 }
 
 nav ul {
+    text-align: center;
     display: inline-block;
     background-color: var(--inac-bg-color);
     white-space: nowrap;
     list-style-type: none;
-    margin: 0;
+    margin: auto;
     padding: 0;
     height: max-content;
-    width: max-content;
+    width: 100%;
+    /* width: max-content; */
     position: fixed;
     /*Make it stick, even on scroll*/
     /*overflow: auto;
     /* Enable scrolling if the sidenav has too much content */
-    border: 1px solid black;
+    border: 0px solid black;
 }
 
 nav li a {
@@ -164,7 +194,7 @@ aside li:last-child {
     width: 100%;
     height: 20px;
     max-width: 600px;
-    background: gray;
+    background: var(--inac-bg-color);
 }
 
 .bar {
@@ -174,7 +204,7 @@ aside li:last-child {
     width: 0%;
     /* this would be dynamically set */
     height: 100%;
-    background: lightblue;
+    background: purple;
 }
 
 .marker-list {
@@ -211,8 +241,21 @@ aside li:last-child {
 
 /* FAQ */
 
-.answer {
-    margin-left: 45px;
-    list-style-type: circle;
-    list-style-position: inside;
+details {
+    border: solid var(--h-font-color) 2px;
+    max-width: 1000px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+summary:before {
+    content: "Show answer";
+}
+
+details[open] summary:before {
+    content: "Hide answer";
+}
+
+details[open] summary {
+    border-bottom: dotted var(--h-font-color) 2px;
 }
