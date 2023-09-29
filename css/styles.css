@@ -6,11 +6,13 @@
     --inac-bg-color: rgb(229, 210, 131);
     --ac-bg-color: rgb(33, 53, 85);
     */
+    /*todo: create variables "primary color" "secondary color" etc... and set the below variables to those*/
     --bg-color: #084C61;
     --h-font-color: #DB504A;
     --body-font-color: #E3B505;
     --inac-bg-color: #56A3A6;
     --ac-bg-color: #4F6D7A;
+    --hov-bg-color: blue;
 }
 
 
@@ -112,7 +114,7 @@ nav li:last-child {
 }
 
 nav li a:hover {
-    background-color: purple;
+    background-color: var(--hov-bg-color);
     color: white;
 }
 
@@ -167,7 +169,7 @@ aside li a {
 }
 
 aside li a:hover {
-    background-color: purple;
+    background-color: var(--hov-bg-color);
     color: white;
 }
 
@@ -203,8 +205,9 @@ aside li:last-child {
     left: 0;
     width: 0%;
     /* this would be dynamically set */
+    /*todo: if possible based on the table values */
     height: 100%;
-    background: purple;
+    background: var(--hov-bg-color);
 }
 
 .marker-list {
