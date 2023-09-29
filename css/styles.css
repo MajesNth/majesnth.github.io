@@ -13,6 +13,7 @@
     --inac-bg-color: #56A3A6;
     --ac-bg-color: #4F6D7A;
     --hov-bg-color: blue;
+    --white-font-color: white;
 }
 
 
@@ -27,7 +28,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+th {
     color: var(--h-font-color);
     text-align: center;
 }
@@ -37,6 +39,10 @@ body {
     color: var(--body-font-color);
     /* text-align: center; */
     margin: 0px 0px 20px 0px;
+}
+
+p {
+    margin: 20px;
 }
 
 a {
@@ -67,7 +73,10 @@ ul {
 }
 
 img {
-    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 
@@ -139,6 +148,7 @@ main {
 
 aside {
     padding-left: 15px;
+    margin-top: 25px;
     margin-left: 15px;
     text-align: center;
 }
@@ -191,12 +201,20 @@ aside li:last-child {
 
 /* Progress bar */
 
+label {
+    float: left;
+    width: 15%;
+}
+
 .progress-bar {
     position: relative;
-    width: 100%;
+    width: 70%;
     height: 20px;
     max-width: 600px;
-    background: var(--inac-bg-color);
+    background: gray;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .bar {
@@ -207,7 +225,8 @@ aside li:last-child {
     /* this would be dynamically set */
     /*todo: if possible based on the table values */
     height: 100%;
-    background: var(--hov-bg-color);
+    background: green;
+    border-radius: 5px;
 }
 
 .marker-list {
@@ -228,17 +247,25 @@ aside li:last-child {
     height: 100%;
     /*background-color: black;*/
     background: gray;
-    background-image: radial-gradient(var(--h-font-color) 1px, transparent 0);
+    background-image: radial-gradient(orange 1px, transparent 0);
     background-size: 4px 4px;
     background-position: -1px -1px;
     font-size: 12px;
-    color: var(--h-font-color);
+    color: orange;
     white-space: nowrap;
 }
 
+
+/* Table of courses */
+
+.dashboard {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .dashboard tr {
-    border: solid black 1px;
-    background-color: darkblue;
+    background-color: var(--ac-bg-color);
+    text-align: center;
 }
 
 
