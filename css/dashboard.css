@@ -1,0 +1,72 @@
+@import "styles.css";
+
+/* Dashboard */
+
+
+/* Progress bar */
+
+label {
+    float: left;
+    width: 15%;
+}
+
+.progress-bar {
+    position: relative;
+    width: 70%;
+    height: 20px;
+    max-width: 600px;
+    background: gray;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    /* this would be dynamically set */
+    /*todo: if possible based on the table values */
+    height: 100%;
+    background: var(--hov-bg-color);
+}
+
+.marker-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.marker-list .marker {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    /*background-color: black;*/
+    background: gray;
+    background-image: radial-gradient(var(--h-font-color) 1px, transparent 0);
+    background-size: 4px 4px;
+    background-position: -1px -1px;
+    font-size: 12px;
+    color: var(--h-font-color);
+    white-space: nowrap;
+}
+
+
+/* Table of courses */
+
+.dashboard {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dashboard tr {
+    background-color: var(--ac-bg-color);
+    text-align: center;
+}

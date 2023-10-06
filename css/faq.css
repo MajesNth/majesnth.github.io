@@ -1,0 +1,35 @@
+@import "styles.css";
+.answer {
+    list-style-type: square;
+    text-align: left;
+    margin-left: 15%;
+}
+
+.numbered {
+    list-style-type: lower-roman;
+}
+
+details {
+    border: solid var(--secondary) 2px;
+    max-width: 1000px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+summary {
+    color: var(--tertiary);
+}
+
+summary:before {
+    /* color: var(--tertiary); */
+    content: "Show answer";
+}
+
+details[open] summary:before {
+    color: var(--tertiary);
+    content: "Hide answer";
+}
+
+details[open] summary {
+    border-bottom: dotted var(--secondary) 2px;
+}

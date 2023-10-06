@@ -64,7 +64,10 @@ body {
 }
 
 p {
-    margin: 20px;
+    /* margin: 20px; */
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a {
@@ -80,7 +83,15 @@ ol {
 
 ul {
     /* margin-left: 5%; */
+    width: 40%;
     list-style-position: inside;
+    text-align: center;
+    /* margin-left: 25%; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
     text-align: left;
 }
 
@@ -139,11 +150,6 @@ nav li a:hover {
     color: white;
 }
 
-.wrapper {
-    display: flex;
-    /*justify-content: space-between;*/
-}
-
 .active {
     background-color: var(--ac-bg-color);
     color: white;
@@ -153,6 +159,11 @@ main {
     display: block;
     padding: 15px;
     margin: 15px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -202,118 +213,4 @@ aside li {
 
 aside li:last-child {
     border-bottom: none;
-}
-
-
-/*Single page elements*/
-
-
-/* Dashboard */
-
-
-/* Progress bar */
-
-label {
-    float: left;
-    width: 15%;
-}
-
-.progress-bar {
-    position: relative;
-    width: 70%;
-    height: 20px;
-    max-width: 600px;
-    background: gray;
-    border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    /* this would be dynamically set */
-    /*todo: if possible based on the table values */
-    height: 100%;
-    background: green;
-    border-radius: 5px;
-}
-
-.marker-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.marker-list .marker {
-    position: absolute;
-    top: 0;
-    width: 1px;
-    height: 100%;
-    /*background-color: black;*/
-    background: gray;
-    background-image: radial-gradient(orange 1px, transparent 0);
-    background-size: 4px 4px;
-    background-position: -1px -1px;
-    font-size: 12px;
-    color: orange;
-    white-space: nowrap;
-}
-
-
-/* Table of courses */
-
-.dashboard {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.dashboard tr {
-    background-color: var(--ac-bg-color);
-    text-align: center;
-}
-
-
-/* FAQ */
-
-.answer {
-    list-style-type: square;
-    text-align: left;
-    margin-left: 15%;
-}
-
-.numbered {
-    list-style-type: lower-roman;
-}
-
-details {
-    border: solid var(--secondary) 2px;
-    max-width: 1000px;
-    text-align: center;
-    margin: 20px auto;
-}
-
-summary {
-    color: var(--tertiary);
-}
-
-summary:before {
-    /* color: var(--tertiary); */
-    content: "Show answer";
-}
-
-details[open] summary:before {
-    color: var(--tertiary);
-    content: "Hide answer";
-}
-
-details[open] summary {
-    border-bottom: dotted var(--secondary) 2px;
 }
