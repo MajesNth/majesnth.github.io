@@ -27,17 +27,19 @@
         <!-- <label for="file">Study Progress:</label>
         <progress id="file" value="0" max="60"> </progress>
         </br>-->
-        <label for="progress-bar">Study Progress:</label>
-        <div class='progress-bar'>
+        <div class="progress-parent">
+            <label for="progress-container">Study Progress:</label>
+            <div class='progress-container'>
 
-            <div class="bar"></div>
-            <ul class="marker-list">
-                <!--Set progress filled in css bar width-->
-                <li class="marker" style='left:75%;'> &nbsp NBSA Boundary</li>
-            </ul>
+                <div class="completeness-bar"></div>
+                <ul class="marker-list">
+                    <!--Set progress filled in css bar width-->
+                    <li class="marker" style='left:75%;'> &nbsp NBSA Boundary</li>
+                </ul>
 
+            </div>
         </div>
-
+        </br>
         <table class="dashboard">
             <tr>
                 <th>Quartile</th>
