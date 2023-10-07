@@ -28,14 +28,17 @@
     --on-surface: black;
     --on-error: black;
     --accent: #DB504A;
-    /* */
-    --bg-color: #084C61;
-    --h-font-color: #ff9560;
-    --body-font-color: #E3B505;
-    --inac-bg-color: #56A3A6;
-    --ac-bg-color: #4F6D7A;
-    --hov-bg-color: blue;
-    --white-font-color: white;
+    /* Text color currently used*/
+    --bg: #084C61;
+    --h-font: #ff9560;
+    --body-font: #E3B505;
+    /* navbar and sidebar */
+    --inactive-bg: #56A3A6;
+    --active-bg: #4F6D7A;
+    --hover-bg: blue;
+    --bar-font: black;
+    --active-font: white;
+    --hover-font: white;
 }
 
 
@@ -57,8 +60,8 @@ th {
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--body-font-color);
+    background-color: var(--bg);
+    color: var(--body-font);
     /* text-align: center; */
     margin: 0px 0px 20px 0px;
 }
@@ -69,6 +72,8 @@ p {
     margin-left: auto;
     margin-right: auto;
 }
+
+@media (max-width: 640px) {}
 
 a {
     color: var(--secondary);
@@ -112,7 +117,7 @@ nav {
 nav ul {
     text-align: center;
     display: inline-block;
-    background-color: var(--inac-bg-color);
+    background-color: var(--inactive-bg);
     white-space: nowrap;
     list-style-type: none;
     margin: auto;
@@ -124,7 +129,6 @@ nav ul {
     /*Make it stick, even on scroll*/
     /*overflow: auto;
     /* Enable scrolling if the sidenav has too much content */
-    border: 0px solid black;
 }
 
 nav li a {
@@ -146,13 +150,13 @@ nav li:last-child {
 }
 
 nav li a:hover {
-    background-color: var(--hov-bg-color);
-    color: white;
+    background-color: var(--hover-bg);
+    color: var(--hover-font);
 }
 
 .active {
-    background-color: var(--ac-bg-color);
-    color: white;
+    background-color: var(--active-bg);
+    color: var(--active-font);
 }
 
 main {
@@ -179,7 +183,7 @@ aside {
 aside ul {
     display: inline-block;
     /* text-align: left; */
-    background-color: var(--inac-bg-color);
+    background-color: var(--inactive-bg);
     white-space: nowrap;
     list-style-type: none;
     margin: 0;
@@ -202,8 +206,8 @@ aside li a {
 }
 
 aside li a:hover {
-    background-color: var(--hov-bg-color);
-    color: white;
+    background-color: var(--hover-bg);
+    color: var(--ac-font);
 }
 
 aside li {
