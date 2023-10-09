@@ -1,0 +1,120 @@
+@import "../styles.css";
+input[type="radio"]:disabled {
+    border: 1px solid #ddd;
+    opacity: 0.5;
+    /* Reduce opacity for a faded look */
+    /* 
+    /* Custom size*/
+    width: 20px;
+    height: 20px;
+    /* Custom colors */
+    background-color: var(--primary);
+    /* Background color when checked */
+    border: 1px solid #007bff;
+    /* Border color when checked */
+    border-radius: 50%;
+    /* Make it circular */
+}
+
+
+/* Style the label element containing the radio button */
+
+.radio-label {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    /* Add padding to make room for the radio button */
+    cursor: not-allowed;
+    /* Change cursor to not-allowed for disabled state */
+    color: var(--body-font);
+    /* Text color for the label */
+}
+
+
+/* Style the radio button input */
+
+.radio-input {
+    display: none;
+    /* Hide the default radio button */
+}
+
+
+/* Style the custom radio indicator */
+
+.radio-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    /* Adjust the size of the custom radio button */
+    height: 16px;
+    /* Adjust the size of the custom radio button */
+    background-color: rgb(176, 182, 184);
+    /* Background color of the custom radio button */
+    /* border: 1px solid rgb(215, 221, 223); */
+    /* Border color of the custom radio button */
+    border-radius: 50%;
+    /* Make it circular */
+}
+
+
+/* Style the custom radio indicator when checked */
+
+.radio-input:checked+.radio-custom::before {
+    content: '';
+    /* Add a content pseudo-element for the radio indicator */
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    /* Size of the inner circle */
+    height: 10px;
+    /* Size of the inner circle */
+    background-color: rgb(88, 96, 99);
+    /* Color of the inner circle when checked */
+    border-radius: 50%;
+    /* Make it circular */
+}
+
+
+/* input[type="checkbox"]:disabled {
+    opacity: 0.5;
+    /* Reduce opacity for a faded look */
+
+
+/* 
+    /* Custom size */
+
+
+/* 
+width: 20px;
+height: 20px; */
+
+
+/* Custom colors */
+
+
+/* background-color: #28a745; */
+
+
+/* Background color when checked */
+
+
+/* Border color when checked */
+
+
+/* } */
+
+*/ ul {}
+
+.question {
+    color: var(--tertiary);
+    margin: 30px auto 10px auto;
+}
+
+p {
+    padding-left: 100px;
+    width: 50%
+}

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="This page holds my writing on my past programming experience such as programming languages or environments I have already been familiar with and where I would have had this experience. ">
     <title>Programming experience</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/blog/programming-experience.css">
 </head>
 
 <body>
@@ -26,15 +26,30 @@
     <main>
         <h1>My programming experience</h1>
         <ol>
-            <li></li>
-            <input type="radio" name="prior experience" checked>
-            <input type="radio" name="prior experience">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li class="question">Do you have any programming experience? This may be due to you prior education, your hobbies and interests, job or any other kind of experience.</li>
+            <label class="radio-label">
+                <input type="radio" class="radio-input" name="prior experience" checked disabled>Yes
+                <span class="radio-custom"></span>
+        </label>
+            <label class="radio-label">
+            <input type="radio" class="radio-input" name="prior experience" disabled>No
+            <span class="radio-custom"></span>
+    </label>
+            <li class="question">You stated that you have some programming experience. Can you tell us where you had this experience?
+            </li>
+            <input type="checkbox" name="prior experience" checked disabled>Prior education
+            <input type="checkbox" name="prior experience" disabled>Job
+            <input type="checkbox" name="prior experience" checked disabled>Hobbies/interests
+            <input type="checkbox" name="prior experience" disabled>Other
+            <li class="question">Motivate your programming experience. What kind of experience did you had? Which language(s) or platform(s)? Etc.</li>
         </ol>
+        <p>I have done a previous study in Software Engineering study for 3 years, though I did not complete it. During that time, I have studied and used mainly Java from the beginning, it was the first language I learned to use and my most comfortable
+            one to use. </br>
+            We mainly learned Object Oriented Programming at the beginning. However, I have also had experience with other languages in various projects, namely: Python, php, c++ again for object oriented programming, c for programming with an unmanaged programming
+            language to get used to pointers or allocating memory, Javascript for functional programming, Prolog for logical programming and SQL to work with databases. </br>In the end, I am somewhat familiar with these languages but need
+            some time to adjust when working with them again as I did not work on them as extensively as I did with Java.
+        </p>
+
     </main>
 
     <footer>

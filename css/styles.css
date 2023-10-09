@@ -49,13 +49,17 @@ header {
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
 h6,
 th {
     color: var(--secondary);
+    text-align: center;
+}
+
+h2 {
+    color: var(--tertiary);
     text-align: center;
 }
 
@@ -72,8 +76,6 @@ p {
     margin-left: auto;
     margin-right: auto;
 }
-
-@media (max-width: 640px) {}
 
 a {
     color: var(--secondary);
