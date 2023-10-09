@@ -46,6 +46,7 @@
 
 header {
     padding-bottom: 37px;
+    font-family: 'proxima-nova', sans-serif;
 }
 
 h1,
@@ -68,6 +69,7 @@ body {
     color: var(--body-font);
     /* text-align: center; */
     margin: 0px 0px auto 0px;
+    font-family: 'open-sans', 'raleway', 'lato';
 }
 
 p {
