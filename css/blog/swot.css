@@ -1,1 +1,15 @@
 @import "../styles.css";
+.swot-table {
+    width: 100%;
+    min-width: 900px;
+    overflow-x: auto;
+    max-width: 1450px;
+}
+
+ul {
+    min-width: 65%;
+}
+
+.outer-heading {
+    color: var(--tertiary);
+}
