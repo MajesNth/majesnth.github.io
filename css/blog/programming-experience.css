@@ -79,6 +79,64 @@ input[type="radio"]:disabled {
 }
 
 
+/* Style the label element containing the checkbox */
+
+.checkbox-label {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    /* Add padding to make room for the checkbox */
+    cursor: not-allowed;
+    /* Change cursor to not-allowed for disabled state */
+    color: var(--body-font);
+    /* Text color for the label */
+}
+
+
+/* Style the checkbox input */
+
+.checkbox-input {
+    display: none;
+    /* Hide the default checkbox */
+}
+
+
+/* Style the custom checkbox indicator */
+
+.checkbox-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    /* Adjust the size of the custom checkbox */
+    height: 16px;
+    /* Adjust the size of the custom checkbox */
+    background-color: rgb(88, 96, 99);
+    /* Background color of the custom checkbox */
+    border: 1px solid rgb(176, 182, 184);
+    /* Border color of the custom checkbox */
+    border-radius: 3px;
+    /* Rounded corners for the custom checkbox */
+}
+
+
+/* Style the custom checkbox indicator when checked */
+
+.checkbox-input:checked+.checkbox-custom::before {
+    content: '\2714';
+    /* Unicode checkmark character */
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(88, 96, 99);
+    /* Color of the checkmark when checked */
+    font-size: 12px;
+    /* Size of the checkmark */
+}
+
+
 /* input[type="checkbox"]:disabled {
     opacity: 0.5;
     /* Reduce opacity for a faded look */
@@ -107,7 +165,7 @@ height: 20px; */
 
 /* } */
 
-*/ ul {}
+ul {}
 
 .question {
     color: var(--tertiary);
