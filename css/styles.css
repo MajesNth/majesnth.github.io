@@ -30,7 +30,6 @@
     --accent: #DB504A;
     /* Text color currently used*/
     --bg: #084C61;
-    --h-font: #ff9560;
     --body-font: #E3B505;
     /* navbar and sidebar */
     --inactive-bg: #56A3A6;
@@ -211,7 +210,7 @@ aside li a {
 
 aside li a:hover {
     background-color: var(--hover-bg);
-    color: var(--ac-font);
+    color: var(--hover-font);
 }
 
 aside li {

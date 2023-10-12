@@ -6,7 +6,7 @@
     --unobtained-progress: gray;
     --obtained-progress: var(--inactive-bg);
     --font-progress: var(--bar-font);
-    --marker: var(--h-font);
+    --marker: var(--tertiary);
 }
 
 
