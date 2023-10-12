@@ -98,10 +98,17 @@
     font-size: calc(0.75*var(--button-size));
 }
 
+
+/* Ordered list question elements */
+
 .question {
     color: var(--tertiary);
+    font-weight: bold;
     margin: 30px auto 10px auto;
 }
+
+
+/* Answer paragraph */
 
 .answer {
     padding-left: 100px;

@@ -16,7 +16,7 @@
     --secondary: #77d83f;
     --tertiary: #E3B505;
     --quarternary: #ff9560;
-    --quinary: rgb(254, 116, 116);
+    /* --quinary: rgb(254, 116, 116); */
     --body-font: rgb(224, 224, 224);
     --body-stroke: black;
     /* --success: black;
@@ -54,18 +54,29 @@ header {
 }
 
 h1,
+h2,
 h3,
 h4,
 h5,
 h6,
 th {
-    color: var(--secondary);
     text-align: center;
+}
+
+h1,
+h4,
+h5,
+h6,
+th {
+    color: var(--secondary);
 }
 
 h2 {
     color: var(--tertiary);
-    text-align: center;
+}
+
+h3 {
+    color: var(--quarternary);
 }
 
 body {
