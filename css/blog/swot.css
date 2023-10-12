@@ -11,6 +11,10 @@
     min-width: 65%;
 }
 
-.outer-heading {
+.inner-heading {
     color: var(--tertiary);
+}
+
+.outer-heading {
+    color: var(--quarternary);
 }
