@@ -1,178 +1,109 @@
 @import "../styles.css";
-input[type="radio"]:disabled {
-    border: 1px solid #ddd;
-    opacity: 0.5;
-    /* Reduce opacity for a faded look */
-    /* 
-    /* Custom size*/
-    width: 20px;
-    height: 20px;
-    /* Custom colors */
-    background-color: var(--primary);
-    /* Background color when checked */
-    border: 1px solid #007bff;
-    /* Border color when checked */
-    border-radius: 50%;
-    /* Make it circular */
+:root {
+    --button-light-color: rgb(176, 182, 184);
+    --button-dark-color: rgb(88, 96, 99);
+    --button-size: 16px;
 }
 
 
-/* Style the label element containing the radio button */
+/* Radio and checkbox label styling */
 
-.radio-label {
+.radio-checkbox-label {
     display: inline-block;
     position: relative;
-    padding-left: 30px;
-    /* Add padding to make room for the radio button */
+    padding-left: 20px;
+    /* Add padding to avoid having text behind radio button */
     cursor: not-allowed;
     /* Change cursor to not-allowed for disabled state */
     color: var(--body-font);
-    /* Text color for the label */
 }
 
-
-/* Style the radio button input */
-
-.radio-input {
+.radio-checkbox-input {
     display: none;
-    /* Hide the default radio button */
+    /* Hide the default button for checkbox and radio*/
 }
 
 
-/* Style the custom radio indicator */
+/* Custom radio indicator outer box*/
 
 .radio-custom {
+    /* Position always at top left */
     position: absolute;
     top: 0;
     left: 0;
-    width: 16px;
-    /* Adjust the size of the custom radio button */
-    height: 16px;
-    /* Adjust the size of the custom radio button */
-    background-color: rgb(176, 182, 184);
-    /* Background color of the custom radio button */
-    /* border: 1px solid rgb(215, 221, 223); */
-    /* Border color of the custom radio button */
-    border-radius: 50%;
+    /* Size of radio button*/
+    width: var(--button-size);
+    height: var(--button-size);
+    background-color: var(--button-light-color);
+    border: calc(0.04*var(--button-size)) solid var(--button-dark-color);
     /* Make it circular */
+    border-radius: 50%;
 }
 
 
-/* Style the custom radio indicator when checked */
+/* Custom radio indicator inner box (when checked) */
 
-.radio-input:checked+.radio-custom::before {
+.radio-checkbox-input:checked+.radio-custom::before {
+    /* Add a content pseudo-element for the radio indicator, leave empty*/
     content: '';
-    /* Add a content pseudo-element for the radio indicator */
     display: block;
+    /* Position of inner circle in center of bigger circle*/
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 10px;
-    /* Size of the inner circle */
-    height: 10px;
-    /* Size of the inner circle */
-    background-color: rgb(88, 96, 99);
+    /* Size of the inner circle*/
+    width: calc(0.625*var(--button-size));
+    height: calc(0.625*var(--button-size));
     /* Color of the inner circle when checked */
-    border-radius: 50%;
+    background-color: var(--button-dark-color);
     /* Make it circular */
+    border-radius: 50%;
 }
 
 
-/* Style the label element containing the checkbox */
-
-.checkbox-label {
-    display: inline-block;
-    position: relative;
-    padding-left: 30px;
-    /* Add padding to make room for the checkbox */
-    cursor: not-allowed;
-    /* Change cursor to not-allowed for disabled state */
-    color: var(--body-font);
-    /* Text color for the label */
-}
-
-
-/* Style the checkbox input */
-
-.checkbox-input {
-    display: none;
-    /* Hide the default checkbox */
-}
-
-
-/* Style the custom checkbox indicator */
+/* Custom checkbox indicator box*/
 
 .checkbox-custom {
     position: absolute;
     top: 0;
     left: 0;
-    width: 16px;
+    width: var(--button-size);
     /* Adjust the size of the custom checkbox */
-    height: 16px;
+    height: var(--button-size);
     /* Adjust the size of the custom checkbox */
-    background-color: rgb(88, 96, 99);
+    background-color: var(--button-dark-color);
     /* Background color of the custom checkbox */
-    border: 1px solid rgb(176, 182, 184);
+    border: calc(0.0625*var(--button-size)) solid var(--button-light-color);
     /* Border color of the custom checkbox */
     border-radius: 3px;
     /* Rounded corners for the custom checkbox */
 }
 
 
-/* Style the custom checkbox indicator when checked */
+/* Custom checkbox indicator checkmark */
 
-.checkbox-input:checked+.checkbox-custom::before {
-    content: '\2714';
+.radio-checkbox-input:checked+.checkbox-custom::before {
     /* Unicode checkmark character */
+    content: '\2714';
     display: block;
     position: absolute;
+    /* Position of inner circle in center of outer box*/
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(88, 96, 99);
     /* Color of the checkmark when checked */
-    font-size: 12px;
+    background-color: var(--button-dark-color);
     /* Size of the checkmark */
+    font-size: calc(0.75*var(--button-size));
 }
-
-
-/* input[type="checkbox"]:disabled {
-    opacity: 0.5;
-    /* Reduce opacity for a faded look */
-
-
-/* 
-    /* Custom size */
-
-
-/* 
-width: 20px;
-height: 20px; */
-
-
-/* Custom colors */
-
-
-/* background-color: #28a745; */
-
-
-/* Background color when checked */
-
-
-/* Border color when checked */
-
-
-/* } */
-
-ul {}
 
 .question {
     color: var(--tertiary);
     margin: 30px auto 10px auto;
 }
 
-p {
+.answer {
     padding-left: 100px;
     width: 50%
 }
