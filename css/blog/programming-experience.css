@@ -99,6 +99,13 @@
 }
 
 
+/* Questions and Radio/Checbox buttons */
+
+ol {
+    padding-left: 25%;
+}
+
+
 /* Ordered list question elements */
 
 .question {
@@ -111,6 +118,6 @@
 /* Answer paragraph */
 
 .answer {
-    padding-left: 100px;
+    padding-left: 50px;
     width: 50%
 }

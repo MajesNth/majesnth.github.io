@@ -1,8 +1,12 @@
 @import "../styles.css";
 .swot-table {
+    /* Take up full width of page */
     width: 100%;
+    /* min width so that on smaller screens it doesn't squeeze everything in */
     min-width: 900px;
+    /* Prevent text from overlapping outside of table */
     overflow-x: auto;
+    /* Set maximum width so that content is not too far appart */
     max-width: 1450px;
     padding: 0 10px;
 }

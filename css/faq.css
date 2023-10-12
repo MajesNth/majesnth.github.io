@@ -1,5 +1,12 @@
 @import "styles.css";
 
+/* List element question */
+
+.question {
+    padding-left: 25%;
+}
+
+
 /* Unorder list answer */
 
 .answer {

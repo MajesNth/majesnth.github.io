@@ -1,43 +1,17 @@
 :root {
-    /*
-    --bg-color: rgb(240, 240, 240);
-    --h-font-color: rgb(33, 53, 85);
-    --body-font-color: rgb(79, 112, 156);
-    --inac-bg-color: rgb(229, 210, 131);
-    --ac-bg-color: rgb(33, 53, 85);
-    */
+    /* Color variables*/
+    /* Background */
     --bg: #084C61;
-    /*todo: create variables "primary color" "secondary color" etc... and set the below variables to those*/
-    /* --primary: black; */
-    /* --primary-variant: black; */
-    /* --body-font: #E3B505; */
-    /* --secondary: rgb(254, 116, 116); */
-    /* --tertiary: #ff9560; */
+    /* Font and element colors */
     --secondary: #77d83f;
     --tertiary: #E3B505;
     --quarternary: #ff9560;
     /* --quinary: rgb(254, 116, 116); */
     --body-font: rgb(224, 224, 224);
     --body-stroke: black;
-    /* --success: black;
-    --warning: black;
-    --danger: black;
-    --dark: black;
-    --medium: black;
-    --light: black;
-    --info: black;
-    --primary-variant: black;
-    --secondary-variant: black;
-    --background: black;
-    --surface: black;
-    --on-primary: black;
-    --on-secondary: black;
-    --on-background: black;
-    --on-surface: black;
-    --on-error: black;
-    --accent: #DB504A; */
     /* navbar and sidebar */
     --inactive-bg: #56A3A6;
+    --inactive-font: black;
     --active-bg: #4F6D7A;
     --hover-bg: blue;
     --bar-font: black;
@@ -50,7 +24,7 @@
 
 header {
     padding-bottom: 37px;
-    font-family: 'proxima-nova', sans-serif;
+    font-family: sans-serif;
 }
 
 h1,
@@ -61,35 +35,41 @@ h5,
 h6,
 th {
     text-align: center;
+    min-width: 200px;
 }
 
 h1,
 h4,
-h5,
-h6,
 th {
     color: var(--secondary);
 }
 
-h2 {
+h2,
+h5 {
     color: var(--tertiary);
 }
 
-h3 {
+h3,
+h6 {
     color: var(--quarternary);
 }
 
 body {
     background-color: var(--bg);
     color: var(--body-font);
-    /* text-align: center; */
+    /* 0 margin on top, left and right for the navbar at the top to not have space on the outside */
     margin: 0px 0px auto 0px;
-    font-family: 'open-sans', 'raleway', 'lato';
+    font-family: 'lato', 'Segoe UI', system-ui;
 }
 
+
+/* For most elements I reduced width to 40-50%, set the margins to auto to centralize the text on big screens 
+    and put a min-width to still look nice on smaller screens, 
+    though they may have to scroll left and right if it is extremely small */
+
 p {
-    /* margin: 20px; */
     width: 45%;
+    min-width: 300px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -99,20 +79,15 @@ a {
 }
 
 ol {
-    /* margin-left: 5%; */
-    list-style-position: inside;
-    text-align: left;
-    margin-left: 25%;
+    min-width: 200px;
 }
 
 ul {
-    /* margin-left: 5%; */
-    width: 40%;
-    list-style-position: inside;
     text-align: center;
-    /* margin-left: 25%; */
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
+    min-width: 300px;
 }
 
 li {
@@ -120,10 +95,24 @@ li {
 }
 
 img {
+    /* Image as block element so it takes up the whole width*/
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 40%;
+    min-width: 300px;
+}
+
+
+/* main {
+    display: block;
+    padding: 15px;
+    margin: 15px;
+} */
+
+table {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -143,17 +132,16 @@ nav ul {
     padding: 0;
     height: max-content;
     width: 100%;
-    /* width: max-content; */
-    position: fixed;
     /*Make it stick, even on scroll*/
-    /*overflow: auto;
+    position: fixed;
+    /* overflow: auto; */
     /* Enable scrolling if the sidenav has too much content */
 }
 
 nav li a {
-    display: block;
     /* Allows us to specify padding*/
-    color: #000;
+    display: block;
+    color: var(--inactive-font);
     padding: 8px 16px;
     text-decoration: none;
 }
@@ -161,36 +149,33 @@ nav li a {
 nav li {
     float: left;
     text-align: center;
-    /*border-bottom: 1px solid black;*/
 }
 
-nav li:last-child {
-    border-bottom: none;
+.my-name {
+    color: var(--inactive-font);
+    font-family: 'Pacifico', 'Dancing Script', 'Great Vibes', 'Italianno', 'Allura', 'Kaushan Script', 'Sacramento', 'Courgette', 'Satisfy', 'Quicksand', cursive;
+    float: right;
+    padding-right: 5%;
 }
+
+
+/* When hovered */
 
 nav li a:hover {
     background-color: var(--hover-bg);
     color: var(--hover-font);
 }
 
+
+/* When it is the selected page */
+
 .active {
     background-color: var(--active-bg);
     color: var(--active-font);
 }
 
-main {
-    display: block;
-    padding: 15px;
-    margin: 15px;
-}
 
-table {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-/*Aside*/
+/*Aside bar*/
 
 aside {
     padding-left: 15px;
