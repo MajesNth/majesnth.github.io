@@ -41,8 +41,7 @@
 .completeness-bar {
     /* Current completed percentage */
     /* this would be dynamically set */
-    /*todo: if possible based on the table values */
-    width: 10%;
+    width: 0%;
     /* Visual color for completed progress on the bar */
     background: var(--obtained-progress);
     /* Use the same border-radius as the parent bar and fill its height */
