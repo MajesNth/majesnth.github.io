@@ -5,6 +5,7 @@
     /* Progress bar */
     --unobtained-progress: gray;
     --obtained-progress: var(--secondary);
+    --failed-progress: rgb(255, 91, 91);
     --marker: var(--body-font);
     --marker-stroke: var(--body-stroke);
 }
@@ -81,7 +82,26 @@
 
 /* Table of courses */
 
+.dashboard th {
+    color: var(--tertiary)
+}
+
 .dashboard tr {
     background-color: var(--table-cell-bg);
     text-align: center;
+}
+
+
+/* Successfully passed components */
+
+.completed {
+    text-decoration: line-through;
+    font-style: italic;
+    color: var(--obtained-progress);
+}
+
+.failed {
+    font-weight: bold;
+    font-style: italic;
+    color: var(--failed-progress)
 }
