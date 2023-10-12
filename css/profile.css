@@ -1,4 +1,14 @@
 @import "styles.css";
+
+/* Space between main rows to easily distinguish them */
+
 .personal-information td {
     padding: 5px;
+}
+
+
+/* Min width for smaller screens to not look too squeezed */
+
+.personal-information {
+    min-width: 700px;
 }
