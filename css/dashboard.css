@@ -4,9 +4,9 @@
     --table-cell-bg: var(--active-bg);
     /* Progress bar */
     --unobtained-progress: gray;
-    --obtained-progress: var(--inactive-bg);
-    --font-progress: var(--bar-font);
-    --marker: var(--tertiary);
+    --obtained-progress: var(--secondary);
+    --marker: var(--body-font);
+    --marker-stroke: var(--body-stroke);
 }
 
 
@@ -20,63 +20,67 @@
     justify-content: center;
 }
 
+
+/* Unfilled progress bar */
+
 .progress-container {
-    /* display: block; */
-    /* float: right; */
     position: relative;
     width: 70%;
     height: 20px;
     max-width: 600px;
     background: var(--unobtained-progress);
+    /* Make it curved */
     border-radius: 5px;
     /* margin-left: auto; */
     /* margin-right: auto; */
 }
 
+
+/* Filled part of bar */
+
 .completeness-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    border-radius: inherit;
+    /* Current completed percentage */
     /* this would be dynamically set */
     /*todo: if possible based on the table values */
-    height: 100%;
+    width: 10%;
+    /* Visual color for completed progress on the bar */
     background: var(--obtained-progress);
+    /* Use the same border-radius as the parent bar and fill its height */
+    border-radius: inherit;
+    height: 100%;
 }
+
+
+/* Marker for NBSA Boundary */
 
 .marker-list {
     list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
 }
 
+
+/* Marker and marker text */
+
 .marker-list .marker {
+    /* Position */
     position: absolute;
     top: 0;
     width: 1px;
     height: 100%;
-    background: rgba(0, 0, 0, 0);
-    background-image: radial-gradient(var(--marker) 1px, transparent 0);
+    /* Setting a dotted line that is black and white to work in both contrasts */
+    background-image: radial-gradient(var(--marker-stroke) 1px, var(--marker) 1px);
     background-size: 4px 4px;
     background-position: -1px -1px;
+    /* Marker text font details*/
     font-size: 12px;
     color: var(--marker);
+    /* Font stroke color to work in ligher settings when the bar is full */
+    text-shadow: -1px -1px 0 var(--marker-stroke), 1px -1px 0 var(--marker-stroke), -1px 1px 0 var(--marker-stroke), 1px 1px 0 var(--marker-stroke);
+    /* Keep the marker and text on the same line */
     white-space: nowrap;
 }
 
 
 /* Table of courses */
-
-.dashboard {
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .dashboard tr {
     background-color: var(--table-cell-bg);

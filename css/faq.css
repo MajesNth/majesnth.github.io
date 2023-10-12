@@ -1,35 +1,56 @@
 @import "styles.css";
+
+/* Unorder list answer */
+
 .answer {
     list-style-type: square;
     text-align: left;
     margin-left: 15%;
 }
 
+
+/* Ordered list answer */
+
 .numbered {
     list-style-type: lower-roman;
 }
 
+
+/* The entier Question & Answer box */
+
 details {
-    border: solid var(--secondary) 2px;
+    border: solid var(--quarternary) 2px;
     max-width: 1000px;
     text-align: center;
     margin: 20px auto;
+    color: var(--font-color);
 }
+
+
+/* The Question part of the box */
 
 summary {
     color: var(--tertiary);
+    font-weight: bold;
 }
 
+
+/* Show answer prompt */
+
 summary:before {
-    /* color: var(--tertiary); */
     content: "Show answer";
 }
 
+
+/* Hide answe prompt */
+
 details[open] summary:before {
-    color: var(--tertiary);
     content: "Hide answer";
 }
 
+
+/* Vertical dotted line to separate Question and Answer */
+
 details[open] summary {
-    border-bottom: dotted var(--secondary) 2px;
+    border-bottom: dotted var(--tertiary) 2px;
 }

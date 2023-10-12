@@ -6,12 +6,20 @@
     --inac-bg-color: rgb(229, 210, 131);
     --ac-bg-color: rgb(33, 53, 85);
     */
+    --bg: #084C61;
     /*todo: create variables "primary color" "secondary color" etc... and set the below variables to those*/
-    --primary: black;
-    --primary-variant: black;
-    --secondary: rgb(254, 116, 116);
-    --tertiary: #ff9560;
-    --success: black;
+    /* --primary: black; */
+    /* --primary-variant: black; */
+    /* --body-font: #E3B505; */
+    /* --secondary: rgb(254, 116, 116); */
+    /* --tertiary: #ff9560; */
+    --secondary: #77d83f;
+    --tertiary: #E3B505;
+    --quarternary: #ff9560;
+    --quinary: rgb(254, 116, 116);
+    --body-font: rgb(224, 224, 224);
+    --body-stroke: black;
+    /* --success: black;
     --warning: black;
     --danger: black;
     --dark: black;
@@ -27,10 +35,7 @@
     --on-background: black;
     --on-surface: black;
     --on-error: black;
-    --accent: #DB504A;
-    /* Text color currently used*/
-    --bg: #084C61;
-    --body-font: #E3B505;
+    --accent: #DB504A; */
     /* navbar and sidebar */
     --inactive-bg: #56A3A6;
     --active-bg: #4F6D7A;
